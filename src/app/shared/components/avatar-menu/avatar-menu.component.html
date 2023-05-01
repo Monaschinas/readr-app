@@ -1,0 +1,18 @@
+<div class="flex">
+  <button
+    (click)="toggleMenu()"
+    [matMenuTriggerFor]="menu"
+  >
+    <img
+      class="h-12 w-12 object-cover bg-white rounded-full"
+      [src]="this.user.urlPhoto"
+      alt=""
+    >
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+  </mat-menu>
+</div>
