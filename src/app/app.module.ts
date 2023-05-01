@@ -15,13 +15,15 @@ import {AuthService} from "./shared/services/auth.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { NotificationMenuComponent } from './shared/components/notification-menu/notification-menu.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     AvatarMenuComponent,
-    NotificationMenuComponent
+    NotificationMenuComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
