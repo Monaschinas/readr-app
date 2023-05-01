@@ -1,0 +1,32 @@
+<header class="flex justify-around items-center bg-primary py-4 px-2">
+  <button
+    id="nav-btn"
+    *ngIf="userIsLogged()"
+    mat-icon-button
+    aria-label="Example icon button with a menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/">
+    <img
+      class="h-16 w-auto hover:scale-105 duration-300"
+      src="assets/logo.png"
+      alt="Readr logo"
+    >
+  </a>
+  <div
+    *ngIf="userIsLogged(); else loginButton"
+    class="flex justify-center items-center gap-2"
+  >
+    <app-notification-menu [notifications]="getNotifications()" />
+    <app-avatar-menu [user]="getUser()" />
+  </div>
+  <ng-template #loginButton>
+    <a
+      routerLink="/login"
+      class="bg-white hover:bg-gray-100 duration-300 text-lg rounded-full px-8 py-2"
+    >
+      Log In
+    </a>
+  </ng-template>
+</header>

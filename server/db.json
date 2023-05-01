@@ -1,0 +1,34 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Mock Notification #1",
+      "description": "This belongs to the user with id 1"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Mock Notification #1",
+      "description": "This belongs to the user with id 2"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Mock Notification #2",
+      "description": "This belongs to the user with id 1"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "title": "Mock Notification #2",
+      "description": "This belongs to the user with id 2"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "title": "Mock Notification #3",
+      "description": "This belongs to the user with id 1"
+    }
+  ]
+}

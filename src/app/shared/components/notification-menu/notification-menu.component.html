@@ -1,0 +1,23 @@
+<div class="flex">
+  <button
+    id="notification-btn"
+    mat-icon-button
+    [matBadge]="notifications.length"
+    matBadgeColor="primary"
+    matBadgePosition="after"
+    aria-label="Example icon button with a menu icon"
+    [matMenuTriggerFor]="menu"
+    (click)="toggleMenu()"
+  >
+    <mat-icon>notifications_none</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div
+      *ngFor="let notification of notifications"
+      class="hover:bg-gray-200 py-1.5 px-3"
+    >
+      <p class="text-lg font-medium">{{ notification.title }}</p>
+      <p class="text-sm max-w-screen-sm">{{ notification.description }}</p>
+    </div>
+  </mat-menu>
+</div>
