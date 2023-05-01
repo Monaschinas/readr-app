@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {User} from "../../models/user";
 
@@ -8,10 +8,16 @@ import {User} from "../../models/user";
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent {
+  @Output() onSideNavToggle = new EventEmitter<boolean>();
+
   constructor(private authService: AuthService) { }
 
   userIsLogged(): boolean {
     return this.authService.isAuthenticated();
+  }
+
+  toggleSideNav() {
+    this.onSideNavToggle.emit(true);
   }
 
   getUser(): User {
