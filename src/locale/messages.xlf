@@ -2,6 +2,337 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="920783504258662893" datatype="html">
+        <source>Welcome back!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6673626898717784752" datatype="html">
+        <source> Please enter a valid email address </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6866065602103806507" datatype="html">
+        <source> Email is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4474716883902721852" datatype="html">
+        <source> Password is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1908285951500318953" datatype="html">
+        <source> Login </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1068464858127721681" datatype="html">
+        <source>Don&apos;t have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;font-semibold text-primary&quot; routerLink=&quot;sign-up&quot;&gt;"/>Sign up<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/components/login-form/login-form.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5769288803885407489" datatype="html">
+        <source>List of chapters:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/components/read-chapter-list/read-chapter-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8286500068574123086" datatype="html">
+        <source>Chapter Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/components/read-chapter-list/read-chapter-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5701618810648052610" datatype="html">
+        <source>Title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/components/read-chapter-list/read-chapter-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/chapter-list/chapter-list.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-chapter-form/edit-chapter-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3193976279273491157" datatype="html">
+        <source>Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/components/read-chapter-list/read-chapter-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/chapter-list/chapter-list.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2014313920164588286" datatype="html">
+        <source> Read </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/components/read-chapter-list/read-chapter-list.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5750033531829477631" datatype="html">
+        <source>Top posts this week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/catalogue/pages/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1832109006397353376" datatype="html">
+        <source>Cover</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="119913986884856958" datatype="html">
+        <source>Quantity of chapters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7357388896808479096" datatype="html">
+        <source>Published Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1271997362648249823" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Edit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/book-list/book-list.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/chapter-list/chapter-list.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="220550782947016929" datatype="html">
+        <source>Order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/chapter-list/chapter-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6362573147438745010" datatype="html">
+        <source>Synopsis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2857373278072828957" datatype="html">
+        <source>Published At</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3740800358802324441" datatype="html">
+        <source>Thumbnail URL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3768927257183755959" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-book-form/edit-book-form.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-chapter-form/edit-chapter-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6205355627445317276" datatype="html">
+        <source>Content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/components/edit-chapter-form/edit-chapter-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6480400973668078897" datatype="html">
+        <source>Edit book info:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/pages/edit-book/edit-book.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3361376161264613832" datatype="html">
+        <source>Book chapter list:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/pages/edit-book/edit-book.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4035259030070486728" datatype="html">
+        <source>Edit chapter info:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/pages/edit-chapter/edit-chapter.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5076528319672888280" datatype="html">
+        <source>Every Story begins with a single word</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/pages/publish/publish.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7548637420331465613" datatype="html">
+        <source>Your published books</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/publish/pages/publish/publish.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4930506384627295710" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/pages/setting/setting.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4517187248597929974" datatype="html">
+        <source>We are currently working here</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/pages/setting/setting.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5571085332093768620" datatype="html">
+        <source>Your profile photo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/avatar-menu/avatar-menu.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6166391799648563506" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>exit_to_app<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Logout </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/avatar-menu/avatar-menu.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5851560788527570644" datatype="html">
+        <source>Notifications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/notification-menu/notification-menu.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8964007152104259115" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;w-6 h-6&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25&quot; /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Home </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6034814655190371739" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;w-6 h-6&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25&quot; /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Catalogue </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">14,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6798693053418834050" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;w-6 h-6&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10&quot; /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Publish </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">22,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5786964634855044418" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;w-6 h-6&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z&quot; /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Authors </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">30,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7953855201228557374" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;w-6 h-6&quot;&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; /&gt;"/><x id="START_TAG__SVG_PATH_1" ctype="x-_svg_path_1" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/> Settings </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">42,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4257128144891591792" datatype="html">
+        <source>Toggle sidebar menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4166166242155319722" datatype="html">
+        <source> Log In </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
