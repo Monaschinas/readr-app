@@ -1,0 +1,23 @@
+<div class="p-4">
+  <p class="text-3xl font-bold">List of chapters:</p>
+  <table mat-table [dataSource]="chapters">
+    <ng-container matColumnDef="order">
+      <th mat-header-cell *matHeaderCellDef>Chapter Number</th>
+      <td mat-cell *matCellDef="let chapter">{{ chapter.order }}</td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let chapter">{{ chapter.title }}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let chapter">
+        <button mat-fab extended (click)="readChapter(chapter)">
+          Read
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+  </table>
+</div>

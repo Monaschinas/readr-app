@@ -1,0 +1,10 @@
+<a [routerLink]="['book', { id: book.id }]">
+  <div>
+    <img
+      class="w-48 h-auto"
+      [src]="book.thumbnailUrl"
+      [alt]="book.title"
+    >
+    <p class="text-center py-1.5">{{ book.title }}</p>
+  </div>
+</a>
