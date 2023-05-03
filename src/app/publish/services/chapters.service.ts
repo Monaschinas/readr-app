@@ -20,4 +20,10 @@ export class ChaptersService extends BaseService<Chapter> {
       map(chapters => chapters.filter(chapter => chapter.bookId === bookId).length)
     );
   }
+
+  getChapterById(chapterId: number) {
+    return this.getAll().pipe(
+      map(chapters => chapters.find(chapter => chapter.id === chapterId) ?? null)
+    );
+  }
 }

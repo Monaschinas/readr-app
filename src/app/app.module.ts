@@ -28,6 +28,8 @@ import { EditBookFormComponent } from './publish/components/edit-book-form/edit-
 import { ChapterListComponent } from './publish/components/chapter-list/chapter-list.component';
 import { MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import { EditChapterComponent } from './publish/pages/edit-chapter/edit-chapter.component';
+import { EditChapterFormComponent } from './publish/components/edit-chapter-form/edit-chapter-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     EditBookComponent,
     EditBookFormComponent,
     ChapterListComponent,
+    EditChapterComponent,
+    EditChapterFormComponent,
   ],
   imports: [
     BrowserModule,
