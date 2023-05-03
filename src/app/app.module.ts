@@ -30,6 +30,7 @@ import { MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { EditChapterComponent } from './publish/pages/edit-chapter/edit-chapter.component';
 import { EditChapterFormComponent } from './publish/components/edit-chapter-form/edit-chapter-form.component';
+import { BookItemComponent } from './catalogue/components/book-item/book-item.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EditChapterFormComponent } from './publish/components/edit-chapter-form
     ChapterListComponent,
     EditChapterComponent,
     EditChapterFormComponent,
+    BookItemComponent,
   ],
   imports: [
     BrowserModule,
