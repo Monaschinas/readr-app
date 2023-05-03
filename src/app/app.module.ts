@@ -34,6 +34,7 @@ import { BookItemComponent } from './catalogue/components/book-item/book-item.co
 import { BookDetailComponent } from './catalogue/pages/book-detail/book-detail.component';
 import { ReadChapterListComponent } from './catalogue/components/read-chapter-list/read-chapter-list.component';
 import { ReadComponent } from './catalogue/pages/read/read.component';
+import { SettingComponent } from './settings/pages/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ReadComponent } from './catalogue/pages/read/read.component';
     BookItemComponent,
     BookDetailComponent,
     ReadChapterListComponent,
-    ReadComponent
+    ReadComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,7 @@ import { ReadComponent } from './catalogue/pages/read/read.component';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

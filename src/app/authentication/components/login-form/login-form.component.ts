@@ -27,6 +27,11 @@ export class LoginFormComponent {
     }
   }
 
+  togglePasswordVisibility(event: MouseEvent) {
+    event.preventDefault();
+    this.hidePassword = !this.hidePassword;
+  }
+
   onSubmit() {
     if (this.loginForm.status === "INVALID") return;
     this.authService.login(this.loginForm.controls['email'].value, this.loginForm.controls['password'].value);

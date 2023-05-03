@@ -16,7 +16,7 @@ export class AuthService {
     private notificationService: NotificationService,
     private usersService: UsersService,
     private router: Router
-  ) { this.login("brunodiaz@mail.com", "asd"); }
+  ) { }
 
   login(email: string, password: string): void {
     email = email.toLowerCase();
