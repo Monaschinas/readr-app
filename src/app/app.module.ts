@@ -21,7 +21,7 @@ import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './catalogue/pages/home/home.component';
 import { PublishComponent } from './publish/pages/publish/publish.component';
-import { BookListComponent } from './publish/components/book-list/book-list.component';
+import { BookListComponent } from "./publish/components/book-list/book-list.component";
 import {MatTableModule} from "@angular/material/table";
 import { EditBookComponent } from './publish/pages/edit-book/edit-book.component';
 import { EditBookFormComponent } from './publish/components/edit-book-form/edit-book-form.component';
@@ -31,6 +31,9 @@ import {MatNativeDateModule} from "@angular/material/core";
 import { EditChapterComponent } from './publish/pages/edit-chapter/edit-chapter.component';
 import { EditChapterFormComponent } from './publish/components/edit-chapter-form/edit-chapter-form.component';
 import { BookItemComponent } from './catalogue/components/book-item/book-item.component';
+import { BookDetailComponent } from './catalogue/pages/book-detail/book-detail.component';
+import { ReadChapterListComponent } from './catalogue/components/read-chapter-list/read-chapter-list.component';
+import { ReadComponent } from './catalogue/pages/read/read.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { BookItemComponent } from './catalogue/components/book-item/book-item.co
     EditChapterComponent,
     EditChapterFormComponent,
     BookItemComponent,
+    BookDetailComponent,
+    ReadChapterListComponent,
+    ReadComponent
   ],
   imports: [
     BrowserModule,

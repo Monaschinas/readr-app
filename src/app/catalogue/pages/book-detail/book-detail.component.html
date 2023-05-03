@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center h-full">
+  <div class="h-full w-full max-w-screen-xl p-4">
+    <p class="text-left text-4xl font-semibold">{{ book.title }}</p>
+    <section class="grid place-items-center  grid-rows-2 lg:grid-cols-[auto_1fr] lg:grid-rows-1 gap-4">
+      <img
+        class="w-56 md:w-64 lg:w-72 h-auto"
+        [src]="book.thumbnailUrl"
+        [alt]="book.title"
+      >
+      <p>{{ book.synopsis }}</p>
+    </section>
+    <app-read-chapter-list [chapters]="chapters" />
+  </div>
+</div>
