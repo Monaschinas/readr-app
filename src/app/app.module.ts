@@ -20,6 +20,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './catalogue/pages/home/home.component';
+import { PublishComponent } from './publish/pages/publish/publish.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeComponent } from './catalogue/pages/home/home.component';
     SideBarComponent,
     LoginComponent,
     LoginFormComponent,
-    HomeComponent
+    HomeComponent,
+    PublishComponent
   ],
   imports: [
     BrowserModule,

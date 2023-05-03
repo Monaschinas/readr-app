@@ -40,6 +40,10 @@ export class AuthService {
     return this.user !== null;
   }
 
+  isAuthor(): boolean {
+    return this.user?.isAuthor ?? false;
+  }
+
   getUser(): User | null {
     return this.user ? { ...this.user } : null;
   }
