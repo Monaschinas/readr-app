@@ -8,7 +8,11 @@ import {Component} from '@angular/core';
 export class AppComponent {
   opened: boolean = false;
 
-  toggleSideBar(toggle: boolean) {
-    if (toggle) this.opened = !this.opened;
+  toggleSideBar(): void {
+    this.opened = !this.opened;
+  }
+
+  setSideBarVisible(state: boolean): void {
+    this.opened = state;
   }
 }

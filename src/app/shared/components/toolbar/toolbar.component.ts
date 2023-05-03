@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import {AuthService} from "../../services/auth.service";
+import {AuthService} from "../../../authentication/services/auth.service";
 import {User} from "../../models/user";
 
 @Component({
@@ -9,6 +9,7 @@ import {User} from "../../models/user";
 })
 export class ToolbarComponent {
   @Output() onSideNavToggle = new EventEmitter<boolean>();
+  @Output() onHideSideNav = new EventEmitter<boolean>();
 
   constructor(private authService: AuthService) { }
 
@@ -18,6 +19,10 @@ export class ToolbarComponent {
 
   toggleSideNav() {
     this.onSideNavToggle.emit(true);
+  }
+
+  hideSideNav() {
+    this.onHideSideNav.emit(true);
   }
 
   getUser(): User {
