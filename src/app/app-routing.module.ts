@@ -5,11 +5,13 @@ import {HomeComponent} from "./catalogue/pages/home/home.component";
 import {AuthGuard} from "./authentication/guards/auth.guard";
 import {PublishComponent} from "./publish/pages/publish/publish.component";
 import {AuthorGuard} from "./publish/guards/author.guard";
+import {EditBookComponent} from "./publish/pages/edit-book/edit-book.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'publish', component: PublishComponent, canActivate:[AuthGuard, AuthorGuard] }
+  { path: 'publish', component: PublishComponent, canActivate:[AuthGuard, AuthorGuard] },
+  { path: 'edit-book', component: EditBookComponent, canActivate:[AuthGuard, AuthorGuard] }
 ];
 
 @NgModule({

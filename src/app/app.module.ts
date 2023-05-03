@@ -21,6 +21,13 @@ import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './catalogue/pages/home/home.component';
 import { PublishComponent } from './publish/pages/publish/publish.component';
+import { BookListComponent } from './publish/components/book-list/book-list.component';
+import {MatTableModule} from "@angular/material/table";
+import { EditBookComponent } from './publish/pages/edit-book/edit-book.component';
+import { EditBookFormComponent } from './publish/components/edit-book-form/edit-book-form.component';
+import { ChapterListComponent } from './publish/components/chapter-list/chapter-list.component';
+import { MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -32,7 +39,11 @@ import { PublishComponent } from './publish/pages/publish/publish.component';
     LoginComponent,
     LoginFormComponent,
     HomeComponent,
-    PublishComponent
+    PublishComponent,
+    BookListComponent,
+    EditBookComponent,
+    EditBookFormComponent,
+    ChapterListComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +57,9 @@ import { PublishComponent } from './publish/pages/publish/publish.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     ReactiveFormsModule
   ],
   providers: [],
