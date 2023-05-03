@@ -3,9 +3,9 @@
   (ngSubmit)="onSubmit()"
   class="flex flex-col items-center bg-white rounded-2xl shadow-xl gap-4 p-6"
 >
-  <p class="text-3xl font-semibold text-center">Welcome back!</p>
+  <p class="text-3xl font-semibold text-center" i18n>Welcome back!</p>
   <mat-form-field class="w-full">
-    <mat-label>Email</mat-label>
+    <mat-label i18n>Email</mat-label>
     <input
       type="email"
       matInput
@@ -13,15 +13,15 @@
       [errorStateMatcher]="matcher"
       placeholder="readr@mail.com"
     >
-    <mat-error *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
+    <mat-error i18n *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
       Please enter a valid email address
     </mat-error>
-    <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+    <mat-error i18n *ngIf="loginForm.controls['email'].hasError('required')">
       Email is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">
-    <mat-label>Password</mat-label>
+    <mat-label i18n>Password</mat-label>
     <input
       matInput
       (keydown.enter)="$event.preventDefault()"
@@ -38,15 +38,16 @@
     >
       <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
-    <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+    <mat-error i18n *ngIf="loginForm.controls['password'].hasError('required')">
       Password is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <button
+    i18n
     type="submit"
-    class="bg-primary hover:bg-secondary text-xl rounded-full text-white py-2 px-6 w-min duration-300"
+    class="bg-primary hover:bg-secondary text-xl rounded-full text-white py-2 px-6 duration-300"
   >
     Login
   </button>
-  <p>Don't have an account? <a class="font-semibold text-primary" routerLink="sign-up">Sign up</a></p>
+  <p i18n>Don't have an account? <a class="font-semibold text-primary" routerLink="sign-up">Sign up</a></p>
 </form>

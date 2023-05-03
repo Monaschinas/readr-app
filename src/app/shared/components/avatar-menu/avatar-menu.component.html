@@ -6,11 +6,12 @@
     <img
       class="h-12 w-12 object-cover bg-white rounded-full"
       [src]="this.user.urlPhoto"
-      alt=""
+      alt="Your profile photo"
+      i18n-alt
     >
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="logout()">
+    <button i18n mat-menu-item (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
       Logout
     </button>
