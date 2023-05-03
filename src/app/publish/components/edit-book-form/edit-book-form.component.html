@@ -1,0 +1,25 @@
+<form
+  class="flex flex-col"
+  [formGroup]="bookForm"
+  (ngSubmit)="onSubmit()"
+>
+  <mat-form-field>
+    <label for="title" class="text-primary mb-2">Title</label>
+    <input id="title" matInput formControlName="title" placeholder="Title">
+  </mat-form-field>
+  <mat-form-field>
+    <label for="synopsis" class="text-primary mb-2">Title</label>
+    <textarea id="synopsis" matInput formControlName="synopsis" placeholder="Synopsis"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <label for="published-at" class="text-primary mb-2">Published At</label>
+    <input matInput [matDatepicker]="picker" formControlName="publishedAt" placeholder="Published At">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker id="published-at" #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <label for="thumbnail-url" class="text-primary mb-2">Published At</label>
+    <input id="thumbnail-url" matInput formControlName="thumbnailUrl" placeholder="Thumbnail URL">
+  </mat-form-field>
+  <button mat-raised-button type="submit" color="primary">Save</button>
+</form>

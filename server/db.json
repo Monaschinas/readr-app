@@ -4,13 +4,29 @@
       "id": 1,
       "name": "Menhera",
       "email": "menhera@mail.com",
-      "urlPhoto": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/menhera-chan-3-1/sticker_28.png?0fce8e4c13ea0763f40b8d577fd192f3"
+      "urlPhoto": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/menhera-chan-3-1/sticker_28.png?0fce8e4c13ea0763f40b8d577fd192f3",
+      "isAuthor": false
     },
     {
       "id": 2,
       "name": "Bruno Díaz",
       "email": "brunodiaz@mail.com",
-      "urlPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-iSO5kd5Qk7acXeacucLuhcCTjXiu3SU1fM57yGfKNovY-fhSy4A7NweQmsBVx6oLcU&usqp=CAU"
+      "urlPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-iSO5kd5Qk7acXeacucLuhcCTjXiu3SU1fM57yGfKNovY-fhSy4A7NweQmsBVx6oLcU&usqp=CAU",
+      "isAuthor": true
+    },
+    {
+      "id": 3,
+      "name": "Takehiko Inoue",
+      "email": "tak@mail.com",
+      "urlPhoto": "https://i0.wp.com/www.coyotemag.fr/wp-content/uploads/2018/04/TAKEHIKO-INOUE-02.jpg",
+      "isAuthor": true
+    },
+    {
+      "id": 4,
+      "name": "Bokuto Uno",
+      "email": "bokuto@mail.com",
+      "urlPhoto": "https://cdn.shopify.com/s/files/1/1061/1924/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_grande.png?v=1571606090",
+      "isAuthor": true
     }
   ],
   "notifications": [
@@ -43,6 +59,98 @@
       "userId": 1,
       "title": "Mock Notification #3",
       "description": "This belongs to the user with id 1"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "authorId": 2,
+      "title": "Batman: Year One",
+      "synopsis": "The story recounts the beginning of Bruce Wayne's career as Batman and James Gordon's with the Gotham City Police Department.",
+      "publishedAt": "1987-02-01",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/71OEX4Y3zJL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 2,
+      "authorId": 3,
+      "title": "Vagabond",
+      "synopsis": "In 16th-century Japan, Shinmen Takezou is a wild, rough young man, in both his appearance and his actions. His aggressive nature has won him the collective reproach and fear of his village, leading him and his best friend, Matahachi Honiden, to run away in search of something grander than provincial life. The pair enlist in the Toyotomi army, yearning for glory—but when the Toyotomi suffer a crushing defeat at the hands of the Tokugawa Clan at the Battle of Sekigahara, the friends barely make it out alive.",
+      "publishedAt": "1998-09-03",
+      "thumbnailUrl": "https://cdn.myanimelist.net/images/manga/1/259070l.jpg"
+    },
+    {
+      "id": 3,
+      "authorId": 3,
+      "title": "Real",
+      "synopsis": "Tomomi Nomiya, former captain of his high school's basketball team turned delinquent, decides to drop out of school after he is crushed by the guilt of ruining a young girl's life in a traffic accident. As he dedicates his free time to helping her, he stumbles upon Kiyoharu Togawa, a former sprinter who has lost the use of his right leg and now plays wheelchair basketball as an alternate outlet.",
+      "publishedAt": "1999-10-28",
+      "thumbnailUrl": "https://cdn.myanimelist.net/images/manga/2/115969l.jpg"
+    },
+    {
+      "id": 4,
+      "authorId": 4,
+      "title": "Reign of the Seven Spellblades",
+      "synopsis": "n the world of magic, there exist deadly irreversible techniques commonly known as spellblades. These sparse and elusive spells, along with their casters, are shrouded in mystery and only their absolute lethality is known to the masses.",
+      "publishedAt": "2018-09-07",
+      "thumbnailUrl": "https://cdn.myanimelist.net/images/manga/3/231022l.jpg"
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "order": 1,
+      "title": "Who I Am - How I Come to Be",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 2,
+      "bookId": 1,
+      "order": 2,
+      "title": "War is Declared",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 3,
+      "bookId": 1,
+      "order": 3,
+      "title": "Black Dawn",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 4,
+      "bookId": 1,
+      "order": 4,
+      "title": "Friend in Need",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 5,
+      "bookId": 2,
+      "order": 1,
+      "title": "Shinmen Takezo",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 6,
+      "bookId": 2,
+      "order": 2,
+      "title": "Akemi",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 7,
+      "bookId": 2,
+      "order": 3,
+      "title": "Oko",
+      "content": "Something really cool happens here B)."
+    },
+    {
+      "id": 8,
+      "bookId": 4,
+      "order": 1,
+      "title": "Prologue",
+      "content": "Long ago, someone once said, \"The brighter the stars, the darker the night.\"\nIt had been some time since she'd last seen a new moon, which had caused her to remember that quote. Of course, she wasn't so conceited as to consider herself a \"star\" in any sense of the word. Those who knew her, however, would certainly consider her one. She came perfectly prepared for every hunt, regardless of whether her target was human or beast. Even if she were to hunt a star, her preparations would put all hunts before it to shame.\nAnd it was with that same level of preparation that her pursuers hounded her tonight. They seemed wholly convinced of their victory, leading her to sincerely think, I see—these people could certainly snuff out a star.\n"
     }
   ]
 }

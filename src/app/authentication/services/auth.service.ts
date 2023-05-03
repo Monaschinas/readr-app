@@ -16,7 +16,7 @@ export class AuthService {
     private notificationService: NotificationService,
     private usersService: UsersService,
     private router: Router
-  ) { }
+  ) { this.login("brunodiaz@mail.com", "asd"); }
 
   login(email: string, password: string): void {
     email = email.toLowerCase();
@@ -38,6 +38,10 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     return this.user !== null;
+  }
+
+  isAuthor(): boolean {
+    return this.user?.isAuthor ?? false;
   }
 
   getUser(): User | null {

@@ -20,6 +20,16 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './catalogue/pages/home/home.component';
+import { PublishComponent } from './publish/pages/publish/publish.component';
+import { BookListComponent } from './publish/components/book-list/book-list.component';
+import {MatTableModule} from "@angular/material/table";
+import { EditBookComponent } from './publish/pages/edit-book/edit-book.component';
+import { EditBookFormComponent } from './publish/components/edit-book-form/edit-book-form.component';
+import { ChapterListComponent } from './publish/components/chapter-list/chapter-list.component';
+import { MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import { EditChapterComponent } from './publish/pages/edit-chapter/edit-chapter.component';
+import { EditChapterFormComponent } from './publish/components/edit-chapter-form/edit-chapter-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +40,14 @@ import { HomeComponent } from './catalogue/pages/home/home.component';
     SideBarComponent,
     LoginComponent,
     LoginFormComponent,
-    HomeComponent
+    HomeComponent,
+    PublishComponent,
+    BookListComponent,
+    EditBookComponent,
+    EditBookFormComponent,
+    ChapterListComponent,
+    EditChapterComponent,
+    EditChapterFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +61,9 @@ import { HomeComponent } from './catalogue/pages/home/home.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     ReactiveFormsModule
   ],
   providers: [],

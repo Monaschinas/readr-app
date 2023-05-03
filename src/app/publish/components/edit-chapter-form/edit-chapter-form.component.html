@@ -1,0 +1,17 @@
+<form
+  class="flex flex-col"
+  [formGroup]="chapterForm"
+  (ngSubmit)="onSubmit()"
+>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Content</mat-label>
+    <textarea matInput formControlName="content" required></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="primary">Save</button>
+</form>
