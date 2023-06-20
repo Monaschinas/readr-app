@@ -1,7 +1,7 @@
 <div class="overflow-x-auto">
   <table mat-table [dataSource]="bookData">
     <ng-container matColumnDef="cover">
-      <th mat-header-cell *matHeaderCellDef i18n>Cover</th>
+      <th mat-header-cell *matHeaderCellDef>{{'cover' | translate}}</th>
       <td mat-cell *matCellDef="let book">
         <img
           class="h-auto w-36 py-4"
@@ -11,23 +11,23 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef i18n>Title</th>
+      <th mat-header-cell *matHeaderCellDef>{{'title' | translate}}</th>
       <td mat-cell *matCellDef="let book">{{ book.title }}</td>
     </ng-container>
     <ng-container matColumnDef="quantity-of-chapters">
-      <th mat-header-cell *matHeaderCellDef i18n>Quantity of chapters</th>
+      <th mat-header-cell *matHeaderCellDef>{{'quantity_of_chapters' | translate}}</th>
       <td mat-cell *matCellDef="let book">{{ book.chapterCount }}</td>
     </ng-container>
     <ng-container matColumnDef="published-date">
-      <th mat-header-cell *matHeaderCellDef i18n>Published Date</th>
+      <th mat-header-cell *matHeaderCellDef>{{'published_date' | translate}}</th>
       <td mat-cell *matCellDef="let book">{{ book.publishedAt }}</td>
     </ng-container>
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef i18n>Actions</th>
       <td mat-cell *matCellDef="let book">
-        <button mat-fab extended (click)="goToEditBook(book)" i18n>
+        <button mat-fab extended (click)="goToEditBook(book)">
           <mat-icon>edit</mat-icon>
-          Edit
+          {{'edit' | translate}}
         </button>
       </td>
     </ng-container>

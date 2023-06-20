@@ -6,14 +6,13 @@
     <img
       class="h-12 w-12 object-cover bg-white rounded-full"
       [src]="this.user.urlPhoto"
-      alt="Your profile photo"
-      i18n-alt
+      alt= "{{'your_profile_photo' | translate}}"
     >
   </button>
   <mat-menu #menu="matMenu">
-    <button i18n mat-menu-item (click)="logout()">
+    <button mat-menu-item (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
-      Logout
+      {{'logout' | translate}}
     </button>
   </mat-menu>
 </div>

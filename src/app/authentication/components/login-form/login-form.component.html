@@ -3,9 +3,9 @@
   (ngSubmit)="onSubmit()"
   class="flex flex-col items-center bg-white rounded-2xl shadow-xl gap-4 p-6"
 >
-  <p class="text-3xl font-semibold text-center" i18n>Welcome back!</p>
+  <p class="text-3xl font-semibold text-center">{{ 'welcome_back' | translate }}</p>
   <mat-form-field class="w-full">
-    <mat-label i18n>Email</mat-label>
+    <mat-label>{{ 'email' | translate }}</mat-label>
     <input
       type="email"
       matInput
@@ -13,15 +13,15 @@
       [errorStateMatcher]="matcher"
       placeholder="readr@mail.com"
     >
-    <mat-error i18n *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
-      Please enter a valid email address
+    <mat-error *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
+      {{'please_enter_valid_email' | translate }}
     </mat-error>
-    <mat-error i18n *ngIf="loginForm.controls['email'].hasError('required')">
-      Email is <strong>required</strong>
+    <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+      {{'email_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">
-    <mat-label i18n>Password</mat-label>
+    <mat-label>{{'password' | translate}}</mat-label>
     <input
       matInput
       (keydown.enter)="$event.preventDefault()"
@@ -38,16 +38,15 @@
     >
       <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
-    <mat-error i18n *ngIf="loginForm.controls['password'].hasError('required')">
-      Password is <strong>required</strong>
+    <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+      {{'password_is' | translate}}<strong> {{'required_2' | translate}}</strong>
     </mat-error>
   </mat-form-field>
   <button
-    i18n
     type="submit"
     class="bg-primary hover:bg-secondary text-xl rounded-full text-white py-2 px-6 duration-300"
   >
-    Login
+    {{'login' | translate }}
   </button>
-  <p i18n>Don't have an account? <a class="font-semibold text-primary" routerLink="sign-up">Sign up</a></p>
+  <p>{{'dont_have_account' | translate}} <a class="font-semibold text-primary" routerLink="sign-up">{{'signup' | translate}}</a></p>
 </form>
