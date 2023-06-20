@@ -4,22 +4,22 @@
   (ngSubmit)="onSubmit()"
 >
   <mat-form-field>
-    <label for="title" i18n class="text-primary mb-2">Title</label>
+    <label for="title" class="text-primary mb-2">{{'title' | translate}}</label>
     <input id="title" matInput formControlName="title" i18n-placeholder placeholder="Title">
   </mat-form-field>
   <mat-form-field>
-    <label for="synopsis" i18n class="text-primary mb-2">Synopsis</label>
-    <textarea id="synopsis" i18n-placeholder matInput formControlName="synopsis" placeholder="Synopsis"></textarea>
+    <label for="synopsis" class="text-primary mb-2">{{'synopsis' | translate}}</label>
+    <textarea id="synopsis" matInput formControlName="synopsis" placeholder="Synopsis"></textarea>
   </mat-form-field>
   <mat-form-field>
-    <label for="published-at" i18n class="text-primary mb-2">Published At</label>
+    <label for="published-at" class="text-primary mb-2">{{'published_at' | translate}}</label>
     <input matInput [matDatepicker]="picker" formControlName="publishedAt" placeholder="Published At">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker id="published-at" #picker></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
-    <label for="thumbnail-url" i18n class="text-primary mb-2">Thumbnail URL</label>
-    <input id="thumbnail-url" i18n-placeholder matInput formControlName="thumbnailUrl" placeholder="Thumbnail URL">
+    <label for="thumbnail-url" class="text-primary mb-2">{{'thumbnail_url' | translate}}</label>
+    <input id="thumbnail-url" matInput formControlName="thumbnailUrl" placeholder="Thumbnail URL">
   </mat-form-field>
-  <button mat-raised-button i18n type="submit" color="primary">Save</button>
+  <button mat-raised-button type="submit" color="primary">{{'save' | translate}}</button>
 </form>

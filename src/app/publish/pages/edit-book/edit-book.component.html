@@ -1,11 +1,11 @@
 <div class="flex flex-col items-center gap-4 p-4">
   <p class="text-3xl text-center font-bold">{{ book.title }}</p>
   <div class="w-full max-w-screen-xl">
-    <h2 i18n>Edit book info:</h2>
+    <h2>{{'edit_book_info' | translate}}</h2>
     <app-edit-book-form [book]="book" />
   </div>
   <div class="w-full max-w-screen-xl">
-    <h2 i18n>Book chapter list:</h2>
+    <h2>{{'book_chapter_list' | translate}}</h2>
     <app-chapter-list [book]="book" />
   </div>
 </div>

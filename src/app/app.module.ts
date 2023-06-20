@@ -10,7 +10,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatBadgeModule} from "@angular/material/badge";
 import { AvatarMenuComponent } from './shared/components/avatar-menu/avatar-menu.component';
 import {MatMenuModule} from "@angular/material/menu";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule, HttpClient} from "@angular/common/http";
 import { NotificationMenuComponent } from './shared/components/notification-menu/notification-menu.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
@@ -35,6 +35,12 @@ import { BookDetailComponent } from './catalogue/pages/book-detail/book-detail.c
 import { ReadChapterListComponent } from './catalogue/components/read-chapter-list/read-chapter-list.component';
 import { ReadComponent } from './catalogue/pages/read/read.component';
 import { SettingComponent } from './settings/pages/setting/setting.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory (http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json')
+}
 
 @NgModule({
   declarations: [
@@ -75,6 +81,13 @@ import { SettingComponent } from './settings/pages/setting/setting.component';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

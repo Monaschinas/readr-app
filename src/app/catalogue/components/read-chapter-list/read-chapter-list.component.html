@@ -1,19 +1,19 @@
 <div class="p-4">
-  <p class="text-3xl font-bold" i18n>List of chapters:</p>
+  <p class="text-3xl font-bold">{{'list_of_chapters' | translate}}</p>
   <table mat-table [dataSource]="chapters">
     <ng-container matColumnDef="order">
-      <th mat-header-cell *matHeaderCellDef i18n>Chapter Number</th>
+      <th mat-header-cell *matHeaderCellDef>{{'chapter_number' | translate}}</th>
       <td mat-cell *matCellDef="let chapter">{{ chapter.order }}</td>
     </ng-container>
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef i18n>Title</th>
+      <th mat-header-cell *matHeaderCellDef>{{'title' | translate}}</th>
       <td mat-cell *matCellDef="let chapter">{{ chapter.title }}</td>
     </ng-container>
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef i18n>Actions</th>
+      <th mat-header-cell *matHeaderCellDef>{{'actions' | translate}}</th>
       <td mat-cell *matCellDef="let chapter">
-        <button i18n mat-fab extended (click)="readChapter(chapter)">
-          Read
+        <button mat-fab extended (click)="readChapter(chapter)">
+          {{'read' | translate}}
         </button>
       </td>
     </ng-container>
