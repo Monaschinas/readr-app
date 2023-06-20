@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,17 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   opened: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    // Set the default language
+    this.translate.setDefaultLang('es');
+  }
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
+  getTranslation(key: string) {
+    return this.translate.instant(key);
+  }
 
   toggleSideBar(): void {
     this.opened = !this.opened;
