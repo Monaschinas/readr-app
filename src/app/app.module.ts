@@ -37,6 +37,7 @@ import { ReadComponent } from './catalogue/pages/read/read.component';
 import { SettingComponent } from './settings/pages/setting/setting.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -63,7 +64,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     BookDetailComponent,
     ReadChapterListComponent,
     ReadComponent,
-    SettingComponent
+    SettingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

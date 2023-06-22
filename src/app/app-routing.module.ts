@@ -10,6 +10,7 @@ import {EditChapterComponent} from "./publish/pages/edit-chapter/edit-chapter.co
 import {BookDetailComponent} from "./catalogue/pages/book-detail/book-detail.component";
 import {ReadComponent} from "./catalogue/pages/read/read.component";
 import {SettingComponent} from "./settings/pages/setting/setting.component";
+import {PageNotFoundComponent} from "./shared/pages/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[AuthGuard] },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'edit-chapter', component: EditChapterComponent, canActivate:[AuthGuard, AuthorGuard] },
   { path: 'book', component: BookDetailComponent, canActivate: [AuthGuard] },
   { path: 'read', component: ReadComponent, canActivate: [AuthGuard] },
-  { path: 'settings', component: SettingComponent, canActivate: [AuthGuard] }
+  { path: 'settings', component: SettingComponent, canActivate: [AuthGuard] },
+  { path: ':path', component: PageNotFoundComponent}
 ];
 
 @NgModule({
