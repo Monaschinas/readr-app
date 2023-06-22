@@ -37,6 +37,9 @@ import { ReadComponent } from './catalogue/pages/read/read.component';
 import { SettingComponent } from './settings/pages/setting/setting.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { RegisterFormComponent } from './authentication/components/register-form/register-form.component';
+import { RegisterComponent } from './authentication/pages/register/register.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 import {AuthorComponent} from "./profiles/pages/author/author.component";
 import {AuthorItemComponent} from "./profiles/components/author-item/author-item.component";
 import {MatCardModule} from "@angular/material/card";
@@ -67,6 +70,9 @@ export function HttpLoaderFactory (http: HttpClient) {
     ReadChapterListComponent,
     ReadComponent,
     SettingComponent,
+    RegisterFormComponent,
+    RegisterComponent,
+    SettingComponent,
     AuthorComponent,
     AuthorItemComponent
   ],
@@ -85,6 +91,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     MatCardModule,
     TranslateModule.forRoot({
