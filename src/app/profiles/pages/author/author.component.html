@@ -1,0 +1,8 @@
+<div class="flex flex-col items-center p-4">
+  <div class="w-full max-w-screen-xl">
+    <h2>{{'authors' | translate}}</h2>
+    <div class="grid place-items-left grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <app-author-item *ngFor="let author of authors" [author]="author"/>
+    </div>
+  </div>
+</div>
