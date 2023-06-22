@@ -37,6 +37,9 @@ import { ReadComponent } from './catalogue/pages/read/read.component';
 import { SettingComponent } from './settings/pages/setting/setting.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {AuthorComponent} from "./profiles/pages/author/author.component";
+import {AuthorItemComponent} from "./profiles/components/author-item/author-item.component";
+import {MatCardModule} from "@angular/material/card";
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -63,7 +66,9 @@ export function HttpLoaderFactory (http: HttpClient) {
     BookDetailComponent,
     ReadChapterListComponent,
     ReadComponent,
-    SettingComponent
+    SettingComponent,
+    AuthorComponent,
+    AuthorItemComponent
   ],
   imports: [
     BrowserModule,
@@ -81,6 +86,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatCardModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
