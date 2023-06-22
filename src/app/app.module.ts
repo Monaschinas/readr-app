@@ -69,7 +69,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     ReadComponent,
     SettingComponent,
     RegisterFormComponent,
-    RegisterComponent
+    RegisterComponent,
     SettingComponent,
     PageNotFoundComponent
   ],
