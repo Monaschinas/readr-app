@@ -10,10 +10,12 @@ import {EditChapterComponent} from "./publish/pages/edit-chapter/edit-chapter.co
 import {BookDetailComponent} from "./catalogue/pages/book-detail/book-detail.component";
 import {ReadComponent} from "./catalogue/pages/read/read.component";
 import {SettingComponent} from "./settings/pages/setting/setting.component";
+import {RegisterComponent} from "./authentication/pages/register/register.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'publish', component: PublishComponent, canActivate:[AuthGuard, AuthorGuard] },
   { path: 'edit-book', component: EditBookComponent, canActivate:[AuthGuard, AuthorGuard] },
   { path: 'edit-chapter', component: EditChapterComponent, canActivate:[AuthGuard, AuthorGuard] },
