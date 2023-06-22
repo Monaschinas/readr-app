@@ -40,6 +40,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { RegisterFormComponent } from './authentication/components/register-form/register-form.component';
 import { RegisterComponent } from './authentication/pages/register/register.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {AuthorComponent} from "./profiles/pages/author/author.component";
+import {AuthorItemComponent} from "./profiles/components/author-item/author-item.component";
+import {MatCardModule} from "@angular/material/card";
 import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 
 export function HttpLoaderFactory (http: HttpClient) {
@@ -71,6 +74,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     RegisterFormComponent,
     RegisterComponent,
     SettingComponent,
+    AuthorComponent,
+    AuthorItemComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -90,6 +95,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatNativeDateModule,
     MatCheckboxModule,
     ReactiveFormsModule,
+    MatCardModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

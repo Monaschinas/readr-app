@@ -11,6 +11,7 @@ import {BookDetailComponent} from "./catalogue/pages/book-detail/book-detail.com
 import {ReadComponent} from "./catalogue/pages/read/read.component";
 import {SettingComponent} from "./settings/pages/setting/setting.component";
 import {RegisterComponent} from "./authentication/pages/register/register.component";
+import {AuthorComponent} from "./profiles/pages/author/author.component";
 import {PageNotFoundComponent} from "./shared/pages/page-not-found/page-not-found.component";
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'book', component: BookDetailComponent, canActivate: [AuthGuard] },
   { path: 'read', component: ReadComponent, canActivate: [AuthGuard] },
   { path: 'settings', component: SettingComponent, canActivate: [AuthGuard] },
+  { path: 'authors', component: AuthorComponent, canActivate: [AuthGuard]},
   { path: ':path', component: PageNotFoundComponent}
 ];
 
