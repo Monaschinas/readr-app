@@ -1,0 +1,65 @@
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flex-col items-center bg-white rounded-2xl shadow-xl gap-4 p-6"
+>
+  <p class="text-3xl font-semibold text-center">{{ 'welcome_back' | translate }}</p>
+
+  <mat-form-field class="w-full">
+    <mat-label>{{ 'name' | translate }}</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="name"
+      [errorStateMatcher]="matcher"
+      placeholder="{{ 'name_placeholder' | translate }}"
+    >
+    <mat-error *ngIf="registerForm.controls['name'].hasError('required')">
+      {{'name_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>{{ 'email' | translate }}</mat-label>
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      [errorStateMatcher]="matcher"
+      placeholder="example@mail.com"
+    >
+    <mat-error *ngIf="registerForm.controls['email'].hasError('email') && !registerForm.controls['email'].hasError('required')">
+      {{'please_enter_valid_email' | translate }}
+    </mat-error>
+    <mat-error *ngIf="registerForm.controls['email'].hasError('required')">
+      {{'email_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>{{ 'photo_url' | translate }}</mat-label>
+    <input
+      type="url"
+      matInput
+      formControlName="urlPhoto"
+      [errorStateMatcher]="matcher"
+      placeholder="https://example.com/photo.jpg"
+    >
+    <mat-error *ngIf="registerForm.controls['urlPhoto'].hasError('url') && !registerForm.controls['urlPhoto'].hasError('required')">
+      {{'please_enter_valid_url' | translate }}
+    </mat-error>
+    <mat-error *ngIf="registerForm.controls['urlPhoto'].hasError('required')">
+      {{'photo_url_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="isAuthor">{{ 'is_author' | translate }}</mat-checkbox>
+
+  <button
+    type="submit"
+    class="bg-primary hover:bg-secondary text-xl rounded-full text-white py-2 px-6 duration-300"
+  >
+    {{'register' | translate }}
+  </button>
+  <p>{{'already_have_account' | translate}} <a class="font-semibold text-primary" routerLink="/login">{{'login' | translate}}</a></p>
+</form>
