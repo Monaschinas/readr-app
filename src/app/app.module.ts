@@ -43,6 +43,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {AuthorComponent} from "./profiles/pages/author/author.component";
 import {AuthorItemComponent} from "./profiles/components/author-item/author-item.component";
 import {MatCardModule} from "@angular/material/card";
+import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -74,7 +75,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     RegisterComponent,
     SettingComponent,
     AuthorComponent,
-    AuthorItemComponent
+    AuthorItemComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
