@@ -46,6 +46,7 @@
   "catalogue" : "Catalogue",
   "publish" : "Publish",
   "authors" : "Authors",
+  "author" : "Author",
   "toggle_sidebar" : "Toggle sidebar menu",
   "log_in" : "Log in"
 }

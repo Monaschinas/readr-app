@@ -46,6 +46,7 @@
   "catalogue" : "Catálogo",
   "publish" : "Publicar",
   "authors" : "Autores",
+  "author" : "Autor",
   "toggle_sidebar" : "Mostrar/ocultar menu lateral",
   "log_in" : "Iniciar Sesión"
 }
