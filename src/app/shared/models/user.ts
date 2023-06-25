@@ -1,6 +1,9 @@
 export interface User {
   id: number;
-  name: string;
+  username: string;
+  firstName: string;
+  lastName: string;
+  password: string;
   email: string;
   urlPhoto: string;
   isAuthor: boolean;
