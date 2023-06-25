@@ -20,8 +20,10 @@ export class BookByAuthorComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    this.booksService.getAll()
-      .subscribe(response => this.books = response);
+    this.booksService.getAll().subscribe(books => {
+      this.groupBooksByAuthor(books);
+    });
+
   }
 
   groupBooksByAuthor(books: Book[]): void {
