@@ -4,6 +4,7 @@ import {NotificationService} from "../../shared/services/notification.service";
 import {Notification} from "../../shared/models/notification";
 import {Router} from "@angular/router";
 import {UsersService} from "./users.service";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,13 @@ import {UsersService} from "./users.service";
 export class AuthService {
   private user: User | null = null;
   private notifications: Array<Notification> = [];
+  private readonly basePath = "https://localhost:8080/api/v1/security/users";
 
   constructor(
     private notificationService: NotificationService,
     private usersService: UsersService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) { }
 
   login(email: string, password: string): void {
@@ -29,6 +32,19 @@ export class AuthService {
           this.router.navigate(['/']);
         });
       })
+  }
+
+  signUp(user: User) {
+    const data = {
+      username: user.username,
+      email: user.email,
+      password: user.password
+    };
+    return this.http.post(
+      `${this.basePath}/sign-up`,
+      data,
+      { headers: new HttpHeaders().set('Content-Type', 'application/json') }
+    );
   }
 
   logout(): void {

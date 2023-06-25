@@ -6,6 +6,7 @@ import {User} from "../../../shared/models/user";
 import {Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {TranslateService} from "@ngx-translate/core";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-register-form',
@@ -29,6 +30,7 @@ export class RegisterFormComponent {
 
   constructor(
     private usersService: UsersService,
+    private authService: AuthService,
     private translateService: TranslateService,
     private snackBar: MatSnackBar,
     private router: Router
@@ -52,16 +54,22 @@ export class RegisterFormComponent {
     if (this.registerForm.value["password"] !== this.registerForm.value["confirmPassword"]) {
       this.translateService.get("passwords-mismatch")
         .subscribe((message: string) => {
-          this.snackBar.open(message, "Ok")
+          this.snackBar.open(message, "Ok");
         });
       return;
     }
 
     this.userData = this.registerForm.value;
-    console.log(this.userData);
-    this.usersService.create(this.userData).subscribe((element)=>{
-      this.router.navigate(['/login']);
-    });
-    //this.authService.register(this.registerForm.value); // Modifica esto de acuerdo a tu implementación de authService
+
+    this.authService.signUp(this.userData)
+      .subscribe({
+        next: data => {
+          this.router.navigate(['/login']);
+        },
+        error: error => {
+          console.log(error);
+          this.snackBar.open(error, "Ok")
+        }
+      });
   }
 }
