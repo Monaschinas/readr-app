@@ -1,0 +1,23 @@
+<h2>Libros agrupados por autor</h2>
+
+<div class="w-full" *ngIf="bookMap.length > 0">
+  <ng-container *ngFor="let item of bookMap">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Libros del autor: {{ getAuthorName(item.authorId) }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let book of item.books">
+            <h4>{{ book.title }}</h4>
+            <p>{{ book.synopsis }}</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+
+<div *ngIf="bookMap.length === 0">
+  <p>No se encontraron libros.</p>
+</div>
