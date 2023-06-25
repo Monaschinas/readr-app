@@ -3,19 +3,44 @@
   (ngSubmit)="onSubmit()"
   class="flex flex-col items-center bg-white rounded-2xl shadow-xl gap-4 p-6"
 >
-  <p class="text-3xl font-semibold text-center">{{ 'welcome_back' | translate }}</p>
+  <p class="text-3xl font-semibold text-center">{{ 'register.title' | translate }}</p>
 
   <mat-form-field class="w-full">
-    <mat-label>{{ 'name' | translate }}</mat-label>
+    <mat-label>{{ 'register.username' | translate }}</mat-label>
     <input
       type="text"
       matInput
-      formControlName="name"
+      formControlName="username"
       [errorStateMatcher]="matcher"
-      placeholder="{{ 'name_placeholder' | translate }}"
     >
-    <mat-error *ngIf="registerForm.controls['name'].hasError('required')">
-      {{'name_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    <mat-error *ngIf="registerForm.controls['firstName'].hasError('required')">
+      {{ 'username_is' | translate }} <strong> {{ 'required_1' | translate }}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>{{ 'register.first-name' | translate }}</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="firstName"
+      [errorStateMatcher]="matcher"
+    >
+    <mat-error *ngIf="registerForm.controls['firstName'].hasError('required')">
+      {{'register.first-name' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>{{ 'register.last-name' | translate }}</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="lastName"
+      [errorStateMatcher]="matcher"
+    >
+    <mat-error *ngIf="registerForm.controls['firstName'].hasError('required')">
+      {{'register.last-name-is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
     </mat-error>
   </mat-form-field>
 
@@ -37,7 +62,7 @@
   </mat-form-field>
 
   <mat-form-field class="w-full">
-    <mat-label>{{ 'photo_url' | translate }}</mat-label>
+    <mat-label>{{ 'register.profile-picture-url' | translate }}</mat-label>
     <input
       type="url"
       matInput
@@ -53,13 +78,69 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-checkbox formControlName="isAuthor">{{ 'is_author' | translate }}</mat-checkbox>
+  <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">
+    <mat-label>{{'register.password' | translate}}</mat-label>
+    <input
+      matInput
+      (keydown.enter)="$event.preventDefault()"
+      [type]="hidePassword ? 'password' : 'text'"
+      formControlName="password"
+      [errorStateMatcher]="matcher"
+    >
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="togglePasswordVisibility($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hidePassword"
+    >
+      <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="registerForm.controls['password'].hasError('minLength')">
+      {{ 'register.password-length-error' | translate }}
+    </mat-error>
+    <mat-error *ngIf="registerForm.controls['password'].hasError('required')">
+      {{'password_is' | translate}}<strong> {{'required_2' | translate}}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">
+    <mat-label>{{'register.confirm-password' | translate}}</mat-label>
+    <input
+      matInput
+      (keydown.enter)="$event.preventDefault()"
+      [type]="hidePassword ? 'password' : 'text'"
+      formControlName="confirmPassword"
+      [errorStateMatcher]="matcher"
+    >
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="togglePasswordVisibility($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hidePassword"
+    >
+      <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('minLength')">
+      {{ 'register.password-length-error' | translate }}
+    </mat-error>
+    <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('required')">
+      {{'password_is' | translate}}<strong> {{'required_2' | translate}}</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-checkbox
+    formControlName="isAuthor"
+  >
+    {{ 'register.is-author' | translate }}
+  </mat-checkbox>
 
   <button
     type="submit"
     class="bg-primary hover:bg-secondary text-xl rounded-full text-white py-2 px-6 duration-300"
   >
-    {{'register' | translate }}
+    {{'register.btn' | translate }}
   </button>
   <p>{{'already_have_account' | translate}} <a class="font-semibold text-primary" routerLink="/login">{{'login' | translate}}</a></p>
 </form>
