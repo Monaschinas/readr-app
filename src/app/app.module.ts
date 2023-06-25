@@ -45,6 +45,7 @@ import {AuthorItemComponent} from "./profiles/components/author-item/author-item
 import {MatCardModule} from "@angular/material/card";
 import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { BookByAuthorComponent } from './catalogue/components/book-by-author/book-by-author.component';
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -77,7 +78,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     SettingComponent,
     AuthorComponent,
     AuthorItemComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BookByAuthorComponent
   ],
   imports: [
     BrowserModule,
