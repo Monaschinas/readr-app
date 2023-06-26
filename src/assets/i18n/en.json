@@ -66,5 +66,8 @@
   "author" : "Author",
   "toggle_sidebar" : "Toggle sidebar menu",
   "log_in" : "Log in",
-  "by_author": "Books by author"
+  "by_author": "Books by author",
+  "page": "Page",
+  "not_found": "not found",
+  "return": "Return"
 }

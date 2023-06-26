@@ -66,5 +66,8 @@
   "author" : "Autor",
   "toggle_sidebar" : "Mostrar/ocultar menu lateral",
   "log_in" : "Iniciar Sesión",
-  "by_author": "Mangas por autor"
+  "by_author": "Mangas por autor",
+  "page": "Página",
+  "not_found": "no encontrada",
+  "return": "Volver"
 }

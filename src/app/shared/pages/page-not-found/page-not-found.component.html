@@ -1,10 +1,10 @@
 <div class="flex flex-col border" style="height: 100%; display: flex">
   <p class="text-7xl font-bold" style="display: flex; align-items: end; justify-content: center; height: 25%;"> 404 </p>
-  <p class=" text-xl font-semibold" style="display: flex; align-items: center; justify-content: center; height: 50px; ">Page "{{ route }}" not found</p>
+  <p class=" text-xl font-semibold" style="display: flex; align-items: center; justify-content: center; height: 50px; ">{{'page' | translate}} "{{ route }}" {{'not_found' | translate}}</p>
   <div>
-    <img src="https://i.ibb.co/zby7n9F/Png-Item-107139.png" style="display: block; margin-left: auto; margin-right: auto; height: 275px; width: auto;">
+    <img src="https://i.ibb.co/zby7n9F/Png-Item-107139.png" alt="Anime girl confused" style="display: block; margin-left: auto; margin-right: auto; height: 275px; width: auto;">
   </div>
-  <div *ngIf="isLogged()" style="display: flex; align-items: center; justify-content: center; height: 40%;"><a class="text-2xl" mat-button routerLink="/home" color="primary">Return home</a></div>
-  <div #elseBlock style="display: flex; align-items: center; justify-content: center; height: 40%;"><a class="text-2xl" mat-button routerLink="/login" color="primary">Return</a></div>
+  <div *ngIf="isLogged()" style="display: flex; align-items: center; justify-content: center; height: 40%;"><a class="text-2xl" mat-button routerLink=" " color="primary">{{'return' | translate}}</a></div>
+  <div #elseBlock style="display: flex; align-items: center; justify-content: center; height: 40%;"><a class="text-2xl" mat-button routerLink="/login" color="primary">{{'return' | translate}}</a></div>
 
 </div>
