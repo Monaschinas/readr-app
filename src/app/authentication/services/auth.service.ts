@@ -9,7 +9,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService implements OnInit{
+export class AuthService {
   private user: User | null = null;
   private notifications: Array<Notification> = [];
   private readonly basePath = "http://localhost:8080/api/v1/security/users";
@@ -21,7 +21,7 @@ export class AuthService implements OnInit{
     private http: HttpClient
   ) { }
 
-  ngOnInit() {
+  loadFromStorage() {
     const userFromStorage = localStorage.getItem("user");
     if (userFromStorage !== null) {
       this.user = JSON.parse(userFromStorage);
@@ -66,10 +66,12 @@ export class AuthService implements OnInit{
 
   setUser(user: User): void {
     this.user = user;
+    localStorage.setItem("user", JSON.stringify(user));
   }
 
   logout(): void {
     this.user = null;
+    localStorage.removeItem("user");
     this.router.navigate(["login"]);
   }
 

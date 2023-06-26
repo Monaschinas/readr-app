@@ -24,11 +24,11 @@
     <app-avatar-menu (onLogout)="hideSideNav()" [user]="getUser()" />
   </div>
   <ng-template #loginButton>
-    <a
-      routerLink="/login"
+    <button
+      (click)="logout()"
       class="bg-white hover:bg-gray-100 duration-300 text-lg rounded-full px-8 py-2"
     >
       {{'log_in' | translate}}
-    </a>
+    </button>
   </ng-template>
 </header>

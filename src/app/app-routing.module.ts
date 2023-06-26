@@ -13,11 +13,12 @@ import {SettingComponent} from "./settings/pages/setting/setting.component";
 import {RegisterComponent} from "./authentication/pages/register/register.component";
 import {AuthorComponent} from "./profiles/pages/author/author.component";
 import {PageNotFoundComponent} from "./shared/pages/page-not-found/page-not-found.component";
+import {UnauthenticatedGuard} from "./authentication/guards/unauthenticated.guard";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[AuthGuard] },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent, canActivate:[UnauthenticatedGuard] },
+  { path: 'register', component: RegisterComponent, canActivate:[UnauthenticatedGuard] },
   { path: 'publish', component: PublishComponent, canActivate:[AuthGuard, AuthorGuard] },
   { path: 'edit-book', component: EditBookComponent, canActivate:[AuthGuard, AuthorGuard] },
   { path: 'edit-chapter', component: EditChapterComponent, canActivate:[AuthGuard, AuthorGuard] },
