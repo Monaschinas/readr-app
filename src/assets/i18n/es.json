@@ -13,6 +13,7 @@
     "btn": "Registrarse",
     "is-author": "Soy un@ autor@"
   },
+  "select-language": "Selecciona un lenguaje",
   "welcome_back" :  "Bienvenid@ de vuelta!",
   "passwords-mismatch": "Por favor, asegúrate de que tus contraseñas coincidan.",
   "name" : "Nombre",

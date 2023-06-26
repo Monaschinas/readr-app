@@ -1,8 +1,17 @@
 <div class="flex flex-col items-center p-4">
   <div class="grid place-items-center w-full max-w-screen-lg">
     <div class="bg-white w-full md:w-1/2 rounded-xl p-6">
-      <h2>{{'settings' | translate}}</h2>
-      <p>{{'we_are_working' | translate}}</p>
+      <h2 class="text-2xl">{{'settings' | translate}}</h2>
+      <mat-form-field>
+        <mat-label>{{ 'select-language' | translate }}</mat-label>
+        <mat-select
+          (selectionChange)="handleSelectionChange($event)"
+          [(value)]="selectedLanguage"
+        >
+          <mat-option value="English">English</mat-option>
+          <mat-option value="Español">Español</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
   </div>
 </div>
