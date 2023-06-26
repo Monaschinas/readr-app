@@ -14,9 +14,13 @@ import {RegisterComponent} from "./authentication/pages/register/register.compon
 import {AuthorComponent} from "./profiles/pages/author/author.component";
 import {PageNotFoundComponent} from "./shared/pages/page-not-found/page-not-found.component";
 import {UnauthenticatedGuard} from "./authentication/guards/unauthenticated.guard";
+import {ViewProfileComponent} from "./profiles/components/view-profile/view-profile.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ViewProfileComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent, canActivate:[UnauthenticatedGuard] },
   { path: 'register', component: RegisterComponent, canActivate:[UnauthenticatedGuard] },
   { path: 'publish', component: PublishComponent, canActivate:[AuthGuard, AuthorGuard] },

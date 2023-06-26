@@ -65,5 +65,6 @@
   "authors" : "Authors",
   "author" : "Author",
   "toggle_sidebar" : "Toggle sidebar menu",
-  "log_in" : "Log in"
+  "log_in" : "Log in",
+  "by_author": "Books by author"
 }
