@@ -6,6 +6,7 @@ export class BaseService<T> {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     })
   }
   constructor(private http: HttpClient) { }

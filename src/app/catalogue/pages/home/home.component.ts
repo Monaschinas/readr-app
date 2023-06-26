@@ -16,6 +16,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.booksService.getAll()
-      .subscribe(response => this.books = response);
+      .subscribe({
+        next: (data: any) => {
+          this.books = data.content;
+        },
+        error: error => {
+          console.log(error);
+        }
+      });
   }
 }

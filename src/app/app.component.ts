@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {AuthService} from "./authentication/services/auth.service";
 
@@ -7,17 +7,19 @@ import {AuthService} from "./authentication/services/auth.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   opened: boolean = false;
 
   constructor(
     private readonly translate: TranslateService,
     private readonly authService: AuthService
-  ) {
-    // Set the default language
-    this.translate.setDefaultLang('en');
+  ) { }
+
+  ngOnInit() {
+    this.translate.setDefaultLang(localStorage.getItem("language") ?? 'en');
     this.authService.loadFromStorage();
   }
+
   switchLanguage(lang: string) {
     this.translate.use(lang);
   }

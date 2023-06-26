@@ -45,6 +45,7 @@ import {AuthorItemComponent} from "./profiles/components/author-item/author-item
 import {MatCardModule} from "@angular/material/card";
 import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatSelectModule} from "@angular/material/select";
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -98,8 +99,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatCheckboxModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatSelectModule,
     TranslateModule.forRoot({
-      defaultLanguage: "en",
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

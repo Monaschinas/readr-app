@@ -11,7 +11,7 @@ export class BooksService extends BaseService<Book> {
 
   constructor(http: HttpClient) {
     super(http);
-    this.basePath = "http://localhost:3000/api/v1/books";
+    this.basePath = "http://localhost:8080/api/v1/publishing/books";
   }
 
   getAllBooksByAuthorId(authorId: number) {
