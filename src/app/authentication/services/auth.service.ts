@@ -50,7 +50,7 @@ export class AuthService {
       password: user.password,
       firstName: user.firstName,
       lastName: user.lastName,
-      urlPhoto: user.urlPhoto ?? "https://cdn-icons-png.flaticon.com/512/3237/3237472.png",
+      urlPhoto: user.urlPhoto?.length === 0 ? "https://cdn-icons-png.flaticon.com/512/3237/3237472.png" : user.urlPhoto,
       isAuthor: user.isAuthor,
     };
     return this.http.post(
