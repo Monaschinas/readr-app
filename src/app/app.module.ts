@@ -62,6 +62,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     NotificationMenuComponent,
     SideBarComponent,
     LoginComponent,
+    BookByAuthorComponent,
     LoginFormComponent,
     HomeComponent,
     PublishComponent,
@@ -103,6 +104,7 @@ export function HttpLoaderFactory (http: HttpClient) {
     MatNativeDateModule,
     MatCheckboxModule,
     ReactiveFormsModule,
+    MatSelectModule,
     MatCardModule,
     MatSelectModule,
     TranslateModule.forRoot({
