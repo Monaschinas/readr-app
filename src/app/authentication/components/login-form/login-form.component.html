@@ -5,19 +5,16 @@
 >
   <p class="text-3xl font-semibold text-center">{{ 'welcome_back' | translate }}</p>
   <mat-form-field class="w-full">
-    <mat-label>{{ 'email' | translate }}</mat-label>
+    <mat-label>{{ 'register.username' | translate }}</mat-label>
     <input
-      type="email"
+      type="text"
       matInput
-      formControlName="email"
+      formControlName="username"
       [errorStateMatcher]="matcher"
-      placeholder="readr@mail.com"
+      placeholder=""
     >
-    <mat-error *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
-      {{'please_enter_valid_email' | translate }}
-    </mat-error>
-    <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
-      {{'email_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
+    <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
+      {{'username_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">
