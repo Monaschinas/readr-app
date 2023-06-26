@@ -11,7 +11,13 @@ export class ToolbarComponent {
   @Output() onSideNavToggle = new EventEmitter<boolean>();
   @Output() onHideSideNav = new EventEmitter<boolean>();
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService
+  ) { }
+
+  logout() {
+    this.authService.logout();
+  }
 
   userIsLogged(): boolean {
     return this.authService.isAuthenticated();

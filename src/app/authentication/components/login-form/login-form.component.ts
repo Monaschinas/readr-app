@@ -41,7 +41,6 @@ export class LoginFormComponent {
     this.authService.login(this.loginForm.controls['username'].value, this.loginForm.controls['password'].value)
       .subscribe({
         next: (data: any) => {
-          console.log(data.resource);
           this.authService.setUser(data.resource);
           this.router.navigate(['/']);
         },
