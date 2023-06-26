@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {FormGroup,FormControl, Validators} from "@angular/forms";
 import {FormErrorStateMatcher} from "../../../shared/matchers/FormErrorStateMatcher";
 import {AuthService} from "../../services/auth.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-form',
@@ -11,13 +13,15 @@ import {AuthService} from "../../services/auth.service";
 export class LoginFormComponent {
   matcher = new FormErrorStateMatcher();
   loginForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   });
   hidePassword: boolean = true;
 
   constructor(
-    private authService: AuthService
+    private readonly authService: AuthService,
+    private readonly snackBar: MatSnackBar,
+    private readonly router: Router
   ) { }
 
   onKeyDown(event: KeyboardEvent): void {
@@ -34,6 +38,16 @@ export class LoginFormComponent {
 
   onSubmit() {
     if (this.loginForm.status === "INVALID") return;
-    this.authService.login(this.loginForm.controls['email'].value, this.loginForm.controls['password'].value);
+    this.authService.login(this.loginForm.controls['username'].value, this.loginForm.controls['password'].value)
+      .subscribe({
+        next: (data: any) => {
+          console.log(data.resource);
+          this.authService.setUser(data.resource);
+          this.router.navigate(['/']);
+        },
+        error: error => {
+          this.snackBar.open(error.error, "Ok", { duration: 3000 });
+        }
+    });
   }
 }

@@ -24,7 +24,7 @@ export class RegisterFormComponent {
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    urlPhoto: new FormControl('', [Validators.required]),
+    urlPhoto: new FormControl(''),
     isAuthor: new FormControl(false)
   });
 
@@ -54,7 +54,7 @@ export class RegisterFormComponent {
     if (this.registerForm.value["password"] !== this.registerForm.value["confirmPassword"]) {
       this.translateService.get("passwords-mismatch")
         .subscribe((message: string) => {
-          this.snackBar.open(message, "Ok");
+          this.snackBar.open(message, "Ok", { duration: 3000 });
         });
       return;
     }
@@ -67,8 +67,11 @@ export class RegisterFormComponent {
           this.router.navigate(['/login']);
         },
         error: error => {
-          console.log(error);
-          this.snackBar.open(error, "Ok")
+          if (error.status === 200) {
+            this.router.navigate(['/login']);
+            return;
+          }
+          this.snackBar.open(error.error, "Ok", { duration: 3000 })
         }
       });
   }

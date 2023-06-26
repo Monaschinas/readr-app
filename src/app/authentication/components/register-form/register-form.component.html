@@ -68,14 +68,8 @@
       matInput
       formControlName="urlPhoto"
       [errorStateMatcher]="matcher"
-      placeholder="https://example.com/photo.jpg"
+      placeholder="Optional"
     >
-    <mat-error *ngIf="registerForm.controls['urlPhoto'].hasError('url') && !registerForm.controls['urlPhoto'].hasError('required')">
-      {{'please_enter_valid_url' | translate }}
-    </mat-error>
-    <mat-error *ngIf="registerForm.controls['urlPhoto'].hasError('required')">
-      {{'photo_url_is' | translate}} <strong> {{ 'required_1' | translate }}</strong>
-    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="w-full" appearance="fill" (keydown)="onKeyDown($event)">

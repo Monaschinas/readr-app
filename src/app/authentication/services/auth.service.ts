@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {User} from "../../shared/models/user";
 import {NotificationService} from "../../shared/services/notification.service";
 import {Notification} from "../../shared/models/notification";
@@ -9,10 +9,10 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService implements OnInit{
   private user: User | null = null;
   private notifications: Array<Notification> = [];
-  private readonly basePath = "https://localhost:8080/api/v1/security/users";
+  private readonly basePath = "http://localhost:8080/api/v1/security/users";
 
   constructor(
     private notificationService: NotificationService,
@@ -21,30 +21,51 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  login(email: string, password: string): void {
-    email = email.toLowerCase();
-    this.usersService.getUserByEmail(email)
-      .subscribe(response => {
-        if (response === null) return;
-        this.user = response;
-        this.notificationService.getNotifications().subscribe((response: any) => {
-          this.notifications = response.filter((notification: any)=> notification.userId === this.user!.id);
-          this.router.navigate(['/']);
-        });
-      })
+  ngOnInit() {
+    const userFromStorage = localStorage.getItem("user");
+    if (userFromStorage !== null) {
+      this.user = JSON.parse(userFromStorage);
+    }
+  }
+
+  login(username: string, password: string) {
+    return this.http.post(
+      `${this.basePath}/sign-in`,
+      JSON.stringify({
+        username: username,
+        password: password
+      }),
+      { headers: new HttpHeaders({
+          'Content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        })
+      }
+    );
   }
 
   signUp(user: User) {
     const data = {
       username: user.username,
       email: user.email,
-      password: user.password
+      password: user.password,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      urlPhoto: user.urlPhoto ?? "https://cdn-icons-png.flaticon.com/512/3237/3237472.png",
+      isAuthor: user.isAuthor,
     };
     return this.http.post(
       `${this.basePath}/sign-up`,
-      data,
-      { headers: new HttpHeaders().set('Content-Type', 'application/json') }
+      JSON.stringify(data),
+      { headers: new HttpHeaders({
+          'Content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        })
+      }
     );
+  }
+
+  setUser(user: User): void {
+    this.user = user;
   }
 
   logout(): void {
